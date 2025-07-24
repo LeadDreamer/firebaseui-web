@@ -29,7 +29,7 @@ import {
 import { useForm } from "@tanstack/react-form";
 import { ConfirmationResult, RecaptchaVerifier } from "firebase/auth";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { z } from "zod";
+import z from "zod";
 import { useAuth, useUI } from "~/hooks";
 import { Button } from "../../components/button";
 import { CountrySelector } from "../../components/country-selector";

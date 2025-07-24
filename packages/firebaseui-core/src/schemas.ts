@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { z } from 'zod';
+import z from 'zod';
 import { RecaptchaVerifier } from 'firebase/auth';
 import { type TranslationsConfig, getTranslation } from '@firebase-ui/translations';
 
