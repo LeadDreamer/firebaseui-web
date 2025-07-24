@@ -1,6 +1,6 @@
 {
   "name": "@firebase-ui/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Core authentication service for Firebase UI",
   "type": "module",
   "main": "./dist/index.cjs",
