@@ -1,6 +1,7 @@
 {
   "name": "@firebase-ui/react",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": "React authentication components for Firebase UI, now with OAuthPopup",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

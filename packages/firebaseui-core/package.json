@@ -1,7 +1,7 @@
 {
   "name": "@firebase-ui/core",
-  "version": "0.0.3",
-  "description": "Core authentication service for Firebase UI",
+  "version": "0.0.4",
+  "description": "Core authentication service for Firebase UI, now with OAuthPopup",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
