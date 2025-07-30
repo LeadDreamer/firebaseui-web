@@ -30,6 +30,7 @@ import {
   PhoneAuthProvider,
   RecaptchaVerifier,
   signInWithCredential,
+  signInWithPopup,
   signInWithRedirect,
   UserCredential,
 } from 'firebase/auth';
@@ -235,6 +236,27 @@ export async function signInWithOAuth(ui: FirebaseUIConfiguration, provider: Aut
 
     ui.setState('signing-in');
     await signInWithRedirect(auth, provider);
+    // We don't modify state here since the user is redirected.
+    // If we support popups, we'd need to modify state here.
+  } catch (error) {
+    handleFirebaseError(ui, error);
+  } finally {
+    ui.setState('idle');
+  }
+}
+
+export async function signInWithOAuthPopup(ui: FirebaseUIConfiguration, provider: AuthProvider): Promise<void> {
+  try {
+    const auth = getAuth(ui.app);
+
+    if (hasBehavior(ui, 'autoUpgradeAnonymousProvider')) {
+      await getBehavior(ui, 'autoUpgradeAnonymousProvider')(ui, provider);
+      // If we get to here, the user is not anonymous, otherwise they
+      // have been redirected to the provider's sign in page.
+    }
+
+    ui.setState('signing-in');
+    await signInWithPopup(auth, provider);
     // We don't modify state here since the user is redirected.
     // If we support popups, we'd need to modify state here.
   } catch (error) {

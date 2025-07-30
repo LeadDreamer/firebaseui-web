@@ -83,7 +83,7 @@ export function initializeUI(config: FirebaseUIConfigurationOptions, name: strin
       setState: (state: FirebaseUIState) => {
         const current = $config.get()[name]!;
         current.setKey(`state`, state);
-      },
+      }, 
       translations,
       behaviors: behaviors ?? {},
       recaptchaMode: config.recaptchaMode ?? 'normal',

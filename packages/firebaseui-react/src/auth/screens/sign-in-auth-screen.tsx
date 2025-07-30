@@ -31,7 +31,7 @@ export type SignInAuthScreenProps = PropsWithChildren<{
   onRegisterClick?: () => void;
 }>;
 
-export function SignInAuthScreen({
+export function SignInAuthScreen({ 
   onForgotPasswordClick,
   onRegisterClick,
   children,

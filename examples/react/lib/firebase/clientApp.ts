@@ -15,6 +15,7 @@
  */
 
 "use client";
+import firebase from "firebase/compat/app";
 
 import { initializeApp, getApps } from "firebase/app";
 import { firebaseConfig } from "./config";
@@ -25,10 +26,15 @@ import { customLanguage, english } from "@firebase-ui/translations";
 export const firebaseApp =
   getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
-export const auth = getAuth(firebaseApp);
+      const firebaseApp2 = (firebaseConfig?.appId
+        ? firebase.initializeApp(firebaseConfig)
+        : firebase.initializeApp()
+      );
+
+export const auth = getAuth(firebaseApp2);
 
 export const ui = initializeUI({
-  app: firebaseApp,
+  app: firebaseApp2,
   behaviors: [autoAnonymousLogin()],
   translations: [
     customLanguage(english.locale, {
@@ -45,6 +51,6 @@ export const ui = initializeUI({
   ],
 });
 
-if (import.meta.env.MODE === "development") {
-  connectAuthEmulator(auth, "http://localhost:9099");
-}
+//if (import.meta.env.MODE === "development") {
+  //connectAuthEmulator(auth, "http://localhost:9099");
+//}
