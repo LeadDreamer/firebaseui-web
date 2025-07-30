@@ -16,11 +16,4 @@
 
 export const firebaseConfig = {
   // your Firebase config here
-  apiKey: "AIzaSyDf8KNOHlFUiwwJ81sTene6yP5X1URklEU",
-  authDomain: "pricing-beta.firebaseapp.com",
-  projectId: "pricing-beta",
-  storageBucket: "pricing-beta.appspot.com",
-  messagingSenderId: "524344196365",
-  appId: "1:524344196365:web:13327e391f506c9b530444",
-  measurementId: "G-43792QVP0C",
 };
