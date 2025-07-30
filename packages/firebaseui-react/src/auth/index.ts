@@ -50,4 +50,4 @@ export {
 export { RegisterForm, type RegisterFormProps } from "./forms/register-form";
 
 /** Export Buttons */
-export { GoogleSignInButton } from "./oauth/google-sign-in-button";
+export { GoogleSignInButton, GoogleSignInButtonPopup } from "./oauth/google-sign-in-button";

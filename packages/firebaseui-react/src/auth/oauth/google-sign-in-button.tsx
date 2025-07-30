@@ -53,7 +53,7 @@ export function GoogleSignInButton() {
   );
 }
 
-export function GoogleSignInButtonPopup() {
+export function GoogleSignInButtonPopup() { 
   const ui = useUI();
 
   return (
